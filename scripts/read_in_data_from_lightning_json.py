@@ -6,6 +6,8 @@ res = requests.get("https://ln-scores.prod.lightningcluster.com/availability/v1/
 # pprint(res.json())
 print(res.json().keys())
 import boto3
+import os
+
 from pprint import pprint
 
 BUCKET_NAME = "lngraphoutput"
@@ -32,7 +34,6 @@ try:
     cur.execute("""SELECT VERSION()""")
     row = cur.fetchone()
     print("Server version is ",row)
-
 except:
     print('You have not connected')
 # print(json_content.get("nodes"))
