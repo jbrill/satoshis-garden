@@ -10,8 +10,8 @@ from pprint import pprint
 
 BUCKET_NAME = "lngraphoutput"
 FILE_NAME = "202204181644.json"
-AWS_SERVER_PUBLIC_KEY = "AKIA6LFMLHOOGQIODT7N"
-AWS_SERVER_SECRET_KEY = "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"
+AWS_SERVER_PUBLIC_KEY = os.getenv("SERVER_PUB_KEY")
+AWS_SERVER_SECRET_KEY = os.getenv("SERVER_SECRET_KEY")
 session = boto3.Session(
     aws_access_key_id=AWS_SERVER_PUBLIC_KEY,
     aws_secret_access_key=AWS_SERVER_SECRET_KEY,
